@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int tinhChuViTamGiac(int a, int b, int c) {
-    return (a + b + c) / 2;
+float tinhChuViTamGiac(int a, int b, int c) {
+    return (float) (a + b + c) / 2;
 }
 int tong(int i, int j){
     return i + j;
@@ -29,7 +29,7 @@ int main() {
         exit(1);
     } else {
         tinhChuViTamGiac(a, b, c);
-        printf("Nua chu vi tam giac la: %d", tinhChuViTamGiac(a, b, c));
+        printf("Nua chu vi tam giac la: %.2f", tinhChuViTamGiac(a, b, c));
     }
 
 return 0;
