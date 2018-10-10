@@ -20,22 +20,11 @@ int main() {
     tongab = a + b;
     tongac = a + c;
     tongbc = c + b;
-    if (a <= 0) {
+    if (!(a > 0 && b > 0 && c > 0)) {
         printf("Độ dài một cạnh tam giác không thể nhỏ hơn hoặc bằng 0.");
         exit(1);
-    } else if (b <= 0) {
-        printf("Độ dài một cạnh tam giác không thể nhỏ hơn hoặc bằng 0.");
-        exit(1);
-    } else if (c <= 0) {
-        printf("Độ dài một cạnh tam giác không thể nhỏ hơn hoặc bằng 0.");
-        exit(1);
-    } else if (tongab <= c){
-        printf("Tổng hai cạnh của một tam giác luôn phải lớn hơn cạnh còn lại (Theo bất đẳng thức tam giác)");
-        exit(1);
-    } else if (tongac <= b){
-        printf("Tổng hai cạnh của một tam giác luôn phải lớn hơn cạnh còn lại (Theo bất đẳng thức tam giác)");
-        exit(1);
-    } else if (tongbc <= a){
+    }
+    if (tongab <= c && tongac <= b && tongbc <= a){
         printf("Tổng hai cạnh của một tam giác luôn phải lớn hơn cạnh còn lại (Theo bất đẳng thức tam giác)");
         exit(1);
     } else {
